@@ -1,6 +1,7 @@
 package com.oguzhanturk.service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -31,6 +32,18 @@ public class StudentManager {
 		}
 		return false;
 	}
+
+//	private Student findStudentWithId(int id) {
+//
+//		Student student = null;
+//		for (Student s : studentList) {
+//			if (s.getId() == id) {
+//				student = s;
+//			}
+//		}
+//
+//		return student;
+//	}
 
 	public boolean deleteStudent(int id) {
 
@@ -65,10 +78,32 @@ public class StudentManager {
 //		Student selectedStudent = collectedList.get(0);
 //		studentList.remove(selectedStudent);
 
-		return studentList.remove(studentList.stream().filter((t) -> t.getId() == id).collect(Collectors.toList()).get(0)); 
+		return studentList
+				.remove(studentList.stream().filter((t) -> t.getId() == id).collect(Collectors.toList()).get(0));
 	}
 
 	public boolean updateStudent(Student student) {
+
+//		Student studentWillUpdate = null;
+		for (Student student2 : studentList) {
+			if (student.getId() == student2.getId()) {
+				student2.setIdentityNumber(student.getIdentityNumber());
+				student2.setName(student.getName());
+				student2.setSurname(student.getSurname());
+				return true;
+			}
+
+		}
+
+//		if (ensureStudentIsExist(student.getId())) {
+//			studentWillUpdate = findStudentWithId(student.getId());
+//
+//			studentWillUpdate.setIdentityNumber(student.getIdentityNumber());
+//			studentWillUpdate.setName(student.getName());
+//			studentWillUpdate.setSurname(student.getSurname());
+//		}
+//
+//		return studentWillUpdate != null;
 
 		return false;
 	}
@@ -76,6 +111,13 @@ public class StudentManager {
 	public List<Student> getAllStudents() {
 		return new ArrayList<Student>(studentList);
 
+	}
+
+	public void printInfo(List<Student> students) {
+		for (Student student : students) {
+			System.out.println("ID :" + student.getId() + "   Name :" + student.getName() + "   Surname :"
+					+ student.getSurname() + "   TC :" + student.getIdentityNumber());
+		}
 	}
 
 }
