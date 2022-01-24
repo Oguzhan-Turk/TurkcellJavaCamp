@@ -33,17 +33,17 @@ public class StudentManager {
 		return false;
 	}
 
-//	private Student findStudentWithId(int id) {
-//
-//		Student student = null;
-//		for (Student s : studentList) {
-//			if (s.getId() == id) {
-//				student = s;
-//			}
-//		}
-//
-//		return student;
-//	}
+	private Student findStudentWithId(int id) {
+
+		Student student = null;
+		for (Student s : studentList) {
+			if (s.getId() == id) {
+				student = s;
+			}
+		}
+
+		return student;
+	}
 
 	public boolean deleteStudent(int id) {
 
