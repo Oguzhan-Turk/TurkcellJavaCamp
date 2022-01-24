@@ -1,4 +1,4 @@
-package com.oguzhanturk;
+package com.oguzhanturk.main;
 
 import java.time.LocalDate;
 import java.util.Date;

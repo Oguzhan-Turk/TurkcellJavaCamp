@@ -1,6 +1,7 @@
-package com.oguzhanturk;
+package com.oguzhanturk.service;
 
 import com.oguzhanturk.entity.Customer;
+import com.oguzhanturk.service.api.CustomerCheckService;
 
 public class CustomerCheckManager implements CustomerCheckService {
 

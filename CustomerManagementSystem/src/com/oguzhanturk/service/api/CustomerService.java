@@ -4,5 +4,5 @@ import com.oguzhanturk.entity.Customer;
 
 public interface CustomerService {
 
-	void save(Customer customer);
+	void save(Customer customer) throws Exception;
 }
