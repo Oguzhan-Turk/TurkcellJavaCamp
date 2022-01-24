@@ -63,7 +63,7 @@ public class StudentManager {
 	}
 
 	public boolean deleteStudentWithStream(int id) {
-
+//
 //		Stream<Student> stream = studentList.stream();
 //		Stream<Student> stream2 = stream.filter(new Predicate<Student>() {
 //
