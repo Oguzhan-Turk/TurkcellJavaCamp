@@ -1,6 +1,8 @@
 package com.oguzhanturk.repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -12,7 +14,7 @@ public class CarMsSqlRepo implements CarRepo {
 	@Override
 	public Car add(Car car) {
 		msSqlCarMap.put(car.getId(), car);
-		System.out.println("MsSql DB'ye kaydedildi");
+//		System.out.println("MsSql DB'ye kaydedildi");
 		return car;
 	}
 
@@ -21,7 +23,7 @@ public class CarMsSqlRepo implements CarRepo {
 
 		if (!Objects.isNull(findById(car.getId()))) {
 			msSqlCarMap.put(car.getId(), car);
-			System.out.println("MsSql DB'de güncellendi");
+//			System.out.println("MsSql DB'de güncellendi");
 			return true;
 		}
 		return false;
@@ -31,7 +33,7 @@ public class CarMsSqlRepo implements CarRepo {
 	public Car delete(int id) {
 		Car willBeRemoved = msSqlCarMap.remove(id);
 		if (willBeRemoved != null) {
-			System.out.println("MsSql DB'den silindi");
+//			System.out.println("MsSql DB'den silindi");
 		}
 		return willBeRemoved;
 	}
@@ -39,6 +41,11 @@ public class CarMsSqlRepo implements CarRepo {
 	@Override
 	public Car findById(int id) {
 		return msSqlCarMap.get(id);
+	}
+
+	@Override
+	public List<Car> findAll() {
+		return new ArrayList<Car>(msSqlCarMap.values());
 	}
 
 }

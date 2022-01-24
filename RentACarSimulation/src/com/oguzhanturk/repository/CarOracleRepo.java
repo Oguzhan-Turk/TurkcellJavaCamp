@@ -1,6 +1,8 @@
 package com.oguzhanturk.repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -13,7 +15,7 @@ public class CarOracleRepo implements CarRepo {
 	@Override
 	public Car add(Car car) {
 		oracleCarMap.put(car.getId(), car);
-		System.out.println("Oracle DB'ye kaydedildi");
+//		System.out.println("Oracle DB'ye kaydedildi");
 		return car;
 	}
 
@@ -22,7 +24,7 @@ public class CarOracleRepo implements CarRepo {
 
 		if (!Objects.isNull(findById(car.getId()))) {
 			oracleCarMap.put(car.getId(), car);
-			System.out.println("Oracle DB'de güncellendi");
+//			System.out.println("Oracle DB'de güncellendi");
 			return true;
 		}
 		return false;
@@ -32,7 +34,7 @@ public class CarOracleRepo implements CarRepo {
 	public Car delete(int id) {
 		Car willBeRemoved = oracleCarMap.remove(id);
 		if (willBeRemoved != null) {
-			System.out.println("Oracle DB'den silindi");
+//			System.out.println("Oracle DB'den silindi");
 		}
 		return willBeRemoved;
 	}
@@ -40,6 +42,11 @@ public class CarOracleRepo implements CarRepo {
 	@Override
 	public Car findById(int id) {
 		return oracleCarMap.get(id);
+	}
+
+	@Override
+	public List<Car> findAll() {
+		return new ArrayList<Car>(oracleCarMap.values());
 	}
 
 }

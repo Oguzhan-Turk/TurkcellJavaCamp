@@ -51,4 +51,9 @@ public class Car {
 		this.color = color;
 	}
 
+	@Override
+	public String toString() {
+		return "Car{" + "id=" + id + ", name='" + name + '\'' + ", brand=" + brand + ", color=" + color + '}';
+	}
+
 }

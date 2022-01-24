@@ -1,5 +1,7 @@
 package com.oguzhanturk.repository;
 
+import java.util.List;
+
 import com.oguzhanturk.entity.Car;
 
 public interface CarRepo {
@@ -11,4 +13,6 @@ public interface CarRepo {
 	Car delete(int id);
 
 	Car findById(int id);
+
+	List<Car> findAll();
 }

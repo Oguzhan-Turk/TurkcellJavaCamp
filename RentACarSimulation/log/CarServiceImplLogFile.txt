@@ -1,0 +1,7 @@
+2022-01-25 00:26:49	G-Max eklendi
+2022-01-25 00:26:49	Leon eklendi
+2022-01-25 00:26:49	Corolla eklendi
+2022-01-25 00:26:49	Punto eklendi
+2022-01-25 00:26:49	Hilux eklendi
+2022-01-25 00:26:49	G-Max silindi
+2022-01-25 00:26:49	Leon güncellendi
