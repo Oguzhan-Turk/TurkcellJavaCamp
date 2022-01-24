@@ -26,6 +26,7 @@ public abstract class Account {
 		this.profilePicture = profilePicture;
 	}
 
+//
 	public int getId() {
 		return id;
 	}

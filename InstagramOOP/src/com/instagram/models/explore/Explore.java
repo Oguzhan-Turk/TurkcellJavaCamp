@@ -23,7 +23,7 @@ public class Explore {
 	public void setReels(Reels[] reels) {
 		this.reels = reels;
 	}
-
+//
 	public void setProducts(Product[] products) {
 		this.products = products;
 	}
