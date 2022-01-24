@@ -24,7 +24,7 @@ public class DirectMessage {
 	public void setMessages(String[] messages) {
 		this.messages = messages;
 	}
-
+//
 	public void setPosts(Content[] posts) {
 		this.posts = posts;
 	}

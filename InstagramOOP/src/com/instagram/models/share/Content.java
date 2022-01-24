@@ -28,6 +28,7 @@ public abstract class Content {
 		this.id = id;
 	}
 
+//
 	public Account getPostOwner() {
 		return postOwner;
 	}
